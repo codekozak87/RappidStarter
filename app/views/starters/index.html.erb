@@ -1,0 +1,48 @@
+<h1> Welcome Starter</h1>
+
+<p> <%= link_to "Get Rappid", new_start_url %></p>
+
+<table>
+
+	<thead>
+
+		<tr>
+			<th>| App Name |</th>
+			<th>Problem |</th>
+			<th>Solution|</th>
+			<th>User Stories |</th>
+			<th>Mock Ups |</th>
+			<th>Layouts |</th>
+			<th>Resources |</th>
+			<th>Associations |</th>
+			<th>Other Considerations |</th>
+
+		</tr>
+
+
+	</thead>
+
+	<tbody>
+		<% @starters.each do |starter| %>
+
+		<tr>
+			<td> <%= starter.app_name %> </td>
+			<td> <%= starter.problem %> </td>
+			<td> <%= starter.solution %> </td>
+			<td> <%= starter.user_stories %> </td>
+			<td> <%= starter.mock_ups %> </td>
+			<td> <%= starter.layouts %> </td>
+			<td> <%= starter.resources %> </td>
+			<td> <%= starter.associations %> </td>
+			<td> <%= starter.other_considerations %> </td>
+
+			<td> <%= link_to "Show Paved Road", starter_url(starter) %> </td>
+			<td> <%= link_to "Fine Tune", fix_start_url(starter) %> </td>
+			<td> <%= link_to "Wipe Out", starter_url(starter), method: "delete", data: {confirm: "Do you really want to wipe out your Rappid Start?"} %> </td>
+			
+		</tr>
+
+		<% end %>
+	</tbody>
+
+</table>

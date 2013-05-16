@@ -1,0 +1,64 @@
+<h1> New Start!</h1>
+
+	<%= form_tag(starters_url, method: 'post') do %>
+
+	<div>
+
+		<%= label_tag :app_name %> <br />
+		<%= text_field_tag :app_name %>
+	</div>
+
+	<div>
+
+		<%= label_tag :problem %> <br />
+		<%= text_field_tag :problem %>
+	</div>
+
+	<div>
+
+		<%= label_tag :solution %> <br />
+		<%= text_field_tag :solution %>
+	</div>
+
+
+	<div>
+
+		<%= label_tag :user_stories %> <br />
+		<%= text_area_tag :user_stories %>
+	</div>
+
+	<div>
+
+		<%= label_tag :mock_ups %> <br />
+		<%= text_field_tag :mock_ups %>
+	</div>
+
+	<div>
+
+		<%= label_tag :layouts %> <br />
+		<%= text_field_tag :layouts %>
+	</div>
+
+	<div>
+
+		<%= label_tag :resources %> <br />
+		<%= text_field_tag :resources %>
+	</div>
+
+	<div>
+
+		<%= label_tag :associations %> <br />
+		<%= text_area_tag :associations %>
+	</div>
+
+	<div>
+
+		<%= label_tag :other_considerations %> <br />
+		<%= text_area_tag :other_considerations %>
+	</div>
+
+
+	<div> <%= submit_tag "Get Started!" %></div>
+
+
+<% end %>

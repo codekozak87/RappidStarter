@@ -1,0 +1,64 @@
+<h1> Fine Tuning <%= @starter.app_name%> </h1>
+
+	<%= form_tag(starter_url(@starter), method: "put") do %>
+
+	<div>
+
+		<%= label_tag :app_name %> <br />
+		<%= text_field_tag :app_name, @starter.app_name %>
+	</div>
+
+	<div>
+
+		<%= label_tag :problem %> <br />
+		<%= text_field_tag :problem, @starter.problem %>
+	</div>
+
+	<div>
+
+		<%= label_tag :solution %> <br />
+		<%= text_field_tag :solution, @starter.solution %>
+	</div>
+
+
+	<div>
+
+		<%= label_tag :user_stories %> <br />
+		<%= text_area_tag :user_stories, @starter.user_stories %>
+	</div>
+
+	<div>
+
+		<%= label_tag :mock_ups %> <br />
+		<%= text_field_tag :mock_ups, @starter.mock_ups %>
+	</div>
+
+	<div>
+
+		<%= label_tag :layouts %> <br />
+		<%= text_field_tag :layouts, @starter.layouts %>
+	</div>
+
+	<div>
+
+		<%= label_tag :resources %> <br />
+		<%= text_field_tag :resources, @starter.resources %>
+	</div>
+
+	<div>
+
+		<%= label_tag :associations %> <br />
+		<%= text_area_tag :associations, @starter.associations%>
+	</div>
+
+	<div>
+
+		<%= label_tag :other_considerations %> <br />
+		<%= text_area_tag :other_considerations, @starter.other_considerations %>
+	</div>
+
+	<div>
+		<%= submit_tag "Apply Fine Tune" %>
+	</div>
+
+	<% end %>
