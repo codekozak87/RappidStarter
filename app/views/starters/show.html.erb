@@ -1,62 +1,97 @@
 <h1> The Road Thus Far </h1>
+<td> <%= link_to "Fine Tune", fix_start_url(@starter) %> </td>
+	<div>
+	<table>
+			<tr>
+				<b>App Name:</b>
+					<%= @starter.app_name %>
 
-		<td> <%= link_to "Fine Tune", fix_start_url(@starter) %> </td>
+			</tr>
+		</div>
+		<div>
+			<tr>
+				<b> Problem: </b>	
+					<%= @starter.problem %>
+			</tr>
+		</div>
+		<div>
+			<tr>
+				<b> Solution: </b>	
+					<%= @starter.solution %>
+			</tr>
+		</div>
+	</table>
+	</div>
 
-		<td> <%= link_to "Wipe Out", starter_url(@starter), method: "delete", data: {confirm: "Do you really want to wipe out your Rappid Start?"} %> </td>
-
-
-		<p>
-			<b>App Name:</b>
-				<%= @starter.app_name %>
-		</p>
-
-		<p>
-
-			<b> Problem: </b>	
-				<%= @starter.problem %>
-		</p>	
-
-		<p>
-
-			<b> Solution: </b>	
-				<%= @starter.solution %>
-		</p>	
-
+	<table class= "table table-hover table-bordered">
+	
 	<div>
 
-		<p>
+		<tr>
+			<td>
 
 			<b> User Stories: </b>	
-				<%= @starter.user_stories %>
-		</p>	
+				<ul>	
+
+					<%= @starter.user_stories %>
+
+				</ul>
+			</td>
+		</tr>	
 
 	</div>
-		<p>
+
+	<div>
+		<tr>
+			<td>
 
 			<b> Mock Ups: </b>	
 				<%= @starter.mock_ups %>
-		</p>	
+			</td>	
+		
+		</tr>
+	</div>
 
-		<p>
+	<div>
+
+		<tr>
+
+			<td>
 
 			<b> Layouts: </b>	
 				<%= @starter.layouts %>
-		</p>	
+			</td>	
+		</tr>
+	</div>
 
-		<p>
+		
+
+	<div>
+		<tr>
+			<td>
 
 			<b> Resources: </b>	
 				<%= @starter.resources %>
-		</p>	
+		</td>	
+		
 
-		<p>
+		<td>
 
 			<b> Associations: </b>	
 				<%= @starter.associations %>
-		</p>
-
-		<p>
+		</td>
+		</tr>
+	</div>
+		<tr>
+		<td>
 
 			<b> Other Considerations: </b>	
 				<%= @starter.other_considerations %>
-		</p>
+		</td>
+
+		</tr>
+
+</table>
+
+
+		<td> <%= link_to "Wipe Out", starter_url(@starter), method: "delete", data: {confirm: "Do you really want to wipe out your Rappid Start?"} %> </td>
