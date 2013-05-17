@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515055435) do
+ActiveRecord::Schema.define(:version => 20130517002657) do
 
   create_table "starters", :force => true do |t|
     t.string "app_name"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(:version => 20130515055435) do
     t.string "other_considerations"
     t.string "resources"
     t.string "associations"
+  end
+
+  create_table "user_stories", :force => true do |t|
+    t.string "title"
+    t.string "description"
+    t.string "designer_notes"
+    t.string "vote_count"
+    t.string "vote_id"
   end
 
 end

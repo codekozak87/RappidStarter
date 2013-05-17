@@ -1,0 +1,31 @@
+<h1>Editing Vote #<%= @vote.id %></h1>
+
+
+<%= form_tag(vote_url(@vote), method: 'put') do %>
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id, @vote.user_id %>
+  </div>
+
+  <div>
+    <%= label_tag :user_story_id %><br />
+    <%= number_field_tag :user_story_id, @vote.user_story_id %>
+  </div>
+
+  <div>
+    <%= label_tag :mock_up_id %><br />
+    <%= number_field_tag :mock_up_id, @vote.mock_up_id %>
+  </div>
+
+  <div>
+    <%= label_tag :layout_id %><br />
+    <%= number_field_tag :layout_id, @vote.layout_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Vote" %>
+  </div>
+
+<% end %>

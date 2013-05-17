@@ -1,0 +1,36 @@
+<h1>New User</h1>
+
+
+<%= form_tag(users_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+    <div>
+    <%= label_tag :user_discipline %><br />
+    <%= number_field_tag :user_discipline %>
+  </div>
+
+    <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+    <div>
+    <%= label_tag :voted_on %><br />
+    <%= text_field_tag :voted_on %>
+  </div>
+
+    <div>
+    <%= label_tag :accountable_for %><br />
+    <%= text_field_tag :accountable_for %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create User" %>
+  </div>
+<% end %>
