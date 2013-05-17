@@ -1,4 +1,12 @@
 RappidStarter::Application.routes.draw do
+
+#Route for the landing page:
+
+root :to => "landing_page#show"
+
+get '/start', controller: "landing_page", action: "show", as: "start_here"
+
+
  
   # Routes for the Vote resource:
   # CREATE
