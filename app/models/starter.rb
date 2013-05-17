@@ -1,6 +1,6 @@
 class Starter < ActiveRecord::Base
 
-has_many :user_stories
+#has_many :user_stories
 
 
 

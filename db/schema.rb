@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517002657) do
+ActiveRecord::Schema.define(:version => 20130517060647) do
 
   create_table "starters", :force => true do |t|
     t.string "app_name"
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(:version => 20130517002657) do
     t.string "designer_notes"
     t.string "vote_count"
     t.string "vote_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string  "name"
+    t.integer "user_discipline"
+    t.string  "email"
+    t.string  "voted_on"
+    t.string  "accountable_for"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer "user_id"
+    t.integer "user_story_id"
+    t.integer "mock_up_id"
+    t.integer "layout_id"
   end
 
 end
