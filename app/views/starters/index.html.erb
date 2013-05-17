@@ -26,7 +26,7 @@
 		<% @starters.each do |starter| %>
 
 		<tr>
-			<td> <%= starter.app_name %> </td>
+			<td> <%= link_to starter.app_name, starter_url(starter) %> </td>
 			<td> <%= starter.problem %> </td>
 			<td> <%= starter.solution %> </td>
 			<td> <%= starter.user_stories %> </td>
@@ -35,10 +35,6 @@
 			<td> <%= starter.resources %> </td>
 			<td> <%= starter.associations %> </td>
 			<td> <%= starter.other_considerations %> </td>
-
-			<td> <%= link_to "Show Paved Road", starter_url(starter) %> </td>
-			<td> <%= link_to "Fine Tune", fix_start_url(starter) %> </td>
-			<td> <%= link_to "Wipe Out", starter_url(starter), method: "delete", data: {confirm: "Do you really want to wipe out your Rappid Start?"} %> </td>
 			
 		</tr>
 
