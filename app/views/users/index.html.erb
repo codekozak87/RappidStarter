@@ -19,7 +19,11 @@
   <tbody>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %> </td>
+      <td><%= user.name %> 
+        <div>  <%= link_to 'Show', user_url(user) %>
+      <%= link_to 'Edit', edit_user_url(user) %>
+      <%= link_to 'Destroy', user_url(user), method: 'delete', data: { confirm: "Do you really want to delete this user?" } %> </div> 
+                                    </td>
       <td><%= user.user_discipline %></td>
       <td><%= user.email %></td>
       <td><%= user.voted_on %></td>

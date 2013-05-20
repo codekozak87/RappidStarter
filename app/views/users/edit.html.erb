@@ -10,7 +10,14 @@
 
   <div>
     <%= label_tag :user_discipline %><br />
-    <%= number_field_tag :user_discipline, @user.user_discipline %>
+    <select name="user_discipline">
+      <option value=<% @user.user_discipline %> selected>User Experience</option>
+      <option value="UX" selected>User Experience</option>
+      <option value="Viz_Design">Visual Design</option>
+      <option value="Front_End "> Front-End(HTML/CSS)</option>
+      <option value="Back_End">Back-End (Web Dev)</option>
+  </select>
+    <%= text_field_tag :user_discipline, @user.user_discipline %>
   </div>
 
   <div>
