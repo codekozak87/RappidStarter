@@ -4,12 +4,66 @@
 <table class= "table table-condensed table-bordered">
 
 	<thead>
+		<% @starters.each do |starter| %>
+		<tr>
 
+
+
+		</tr>
 		<tr>
 			<th>App Name</th>
 			<th>Problem</th>
 			<th>Solution</th>
-			<th>User Stories</th>
+			<th>Design Elements</th>
+			<th>Development Elements</th>
+		
+
+		</tr>
+
+		<% end %>
+
+	</thead>
+
+	<tbody>
+		<% @starters.each do |starter| %>
+
+		<tr>
+			<td><h3> <%= starter.app_name  %> </h3>
+			<div> <p class="btn btn-large"> <%= link_to ("Snapshot"), starter_url(starter) %> </p> </div> </td>
+			<td> <%= starter.problem %> </td>
+			<td> <%= starter.solution %> </td>
+			<td> <ul>
+
+					<li> User Stories </li> 
+					<li> Layouts </li> 
+					<li> Mock Ups </li> 
+
+									</ul> 
+										</td>
+
+			<td> 
+				<ul>
+
+					<li> Resources </li> 
+					<li> Associations </li> 
+					<li> Domain Modeling </li> 
+
+										</ul> 
+											</td>
+			
+		</tr>
+
+		<% end %>
+	</tbody>
+
+</table>
+
+<table class="table table-bordered">
+	<thead>
+		<% @starters.each do |starter| %>
+
+		<tr>
+			<th><%= link_to "User Stories", user_stories_url %> </th>
 			<th>Mock ups</th>
 			<th>Layouts</th>
 			<th>Resources</th>
@@ -18,27 +72,25 @@
 
 		</tr>
 
+		<% end %>
 
 	</thead>
 
 	<tbody>
 		<% @starters.each do |starter| %>
 
-		<tr>
-			<td> <%= link_to starter.app_name, starter_url(starter) %> </td>
-			<td> <%= starter.problem %> </td>
-			<td> <%= starter.solution %> </td>
+
 			<td> <%= starter.user_stories %> </td>
 			<td> <%= starter.mock_ups %> </td>
 			<td> <%= starter.layouts %> </td>
 			<td> <%= starter.resources %> </td>
 			<td> <%= starter.associations %> </td>
 			<td> <%= starter.other_considerations %> </td>
-			
-		</tr>
 
 		<% end %>
-	</tbody>
 
+
+
+	</tbody>
 </table>
 

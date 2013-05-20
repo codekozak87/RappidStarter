@@ -20,9 +20,19 @@ ActiveRecord::Schema.define(:version => 20130517060647) do
     t.string "user_stories"
     t.string "mock_ups"
     t.string "layouts"
-    t.string "other_considerations"
     t.string "resources"
     t.string "associations"
+    t.string "other_considerations"
+  end
+
+  create_table "starts", :force => true do |t|
+    t.string "app_name"
+    t.string "problem"
+    t.string "solution"
+    t.string "user_stories"
+    t.string "mock_ups"
+    t.string "layouts"
+    t.string "other_considerations"
   end
 
   create_table "user_stories", :force => true do |t|
