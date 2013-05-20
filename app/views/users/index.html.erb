@@ -2,14 +2,14 @@
 
 <p><%= link_to 'Add a New User', new_user_url %></p>
 
-<table>
+<table class= "table table-condensed table-bordered">
   <thead>
     <tr>
       <th>Name</th>
-      <th>User discipline</th>
+      <th>User Discipline</th>
       <th>Email</th>
-      <th>Voted on</th>
-      <th>Accountable for</th>
+      <th>Voted On</th>
+      <th>Accountability</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,15 +19,13 @@
   <tbody>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %></td>
+      <td><%= user.name %> </td>
       <td><%= user.user_discipline %></td>
       <td><%= user.email %></td>
       <td><%= user.voted_on %></td>
       <td><%= user.accountable_for %></td>
   
-      <td><%= link_to 'Show', user_url(user) %></td>
-      <td><%= link_to 'Edit', edit_user_url(user) %></td>
-      <td><%= link_to 'Destroy', user_url(user), method: 'delete', data: { confirm: "Do you really want to delete this user?" } %></td>
+     
 
     </tr>
   <% end %>

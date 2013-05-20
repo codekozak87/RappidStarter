@@ -11,7 +11,12 @@
 
     <div>
     <%= label_tag :user_discipline %><br />
-    <%= number_field_tag :user_discipline %>
+    <select name="user_discipline">
+      <option value="UX" selected>User Experience</option>
+      <option value="Viz_Design">Visual Design</option>
+      <option value="Front_End "> Front-End(HTML/CSS)</option>
+      <option value="Back_End">Back-End (Web Dev)</option>
+  </select>
   </div>
 
     <div>
@@ -26,7 +31,7 @@
 
     <div>
     <%= label_tag :accountable_for %><br />
-    <%= text_field_tag :accountable_for %>
+    <%= text_area_tag :accountable_for %>
   </div>
 
   
